@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/b2c7e52a3c.js"crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="/css/WS4.css">
+  </head>
+  
+  <body>
+    <div class="container-fluid flex-column p-3">
+        <div class="container" id="box">
+            <form class="">
+                <div class="form-group row">
+                    <label for="Cus_ID" class="col-2 col-form-label">เลขที่ลูกค้า:</label>
+                    <div class="col-2">
+                        <input class="form-control" type="text" placeholder="ตั้งแต่">
+                    </div>
+                    <div class="col-2">
+                        <input class="form-control" type="text" placeholder="ถึง">
+                    </div>
+                    <label for="Number_item" class="col-2 col-form-label">เลขที่รายการ:</label>
+                    <div class="col-2 ">
+                        <input class="form-control" type="text" placeholder="ตั้งแต่">
+                    </div>
+                    <div class="col-2">
+                        <input class="form-control" type="text" placeholder="ถึง">
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label for="A_Date" class="col-2 col-form-label">วันที่ขออนุมัติ:</label>
+                    <div class="col-2">
+                        <input type="text" class="form-control"  placeholder="ตั้งแต่">
+                    </div>
+                    <div class="col-2">
+                        <input type="text" class="form-control"  placeholder="ถึง">
+                    </div>
+                    <label for="status" class="col-2">สถานะรายการ:</label>
+                    <div class="col-4">
+                        <select class="form-control" name="status" id="">
+                            <option selected>กรุณาเลือกรายการ</option>
+                            <option value="">อนุมัติ</option>
+                            <option value="">รออนุมัติ</option>
+                            <option value="">ไม่อนุมัติ</option>
+                        </select>
+                    </div>
+                </div>
+
+            
+                <div class="form-group row">
+                    <label for="fullname" class="col-2">ชื่อ-สกุล:</label>
+                    <div class="col-3">
+                        <input type="text" class="form-control"  placeholder="ชื่อ - สกุล">
+                    </div>
+                </div>
+
+                <div class="d-flex justify-content-center align-items-center">
+                    <button type="submit" class="btn btn-primary" style="width: 150px;">ค้นหา</button>
+                </div>
+                <br>
+
+            </form>
+        </div>
+
+    <br>
+    <table class="table">
+                <thead>
+                    <tr>
+                        <th>เลขที่รายการ</th>
+                        <th>เลขที่ลูกค้า</th>
+                        <th>ชื่อ-สกุล</th>
+                        <th>วันที่ขออนุมัติ</th>
+                        <th>ประเภทการส่งพัสดุ</th>
+                        <th>สถานะ</th>
+                        <th>ผู้อนุมัติ</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>TS00001</td>
+                        <td>DP000001</td>
+                        <td>มารินี ศุขใจ</td>
+                        <td>1/10/2020</td>
+                        <td>ขายสินค้าออนไลน์</td>
+                        <td>รออนุมัติ</td>
+                        <td>เจ้าหน้าที่</td>
+                        <td><a href="#">Edit</a></td>
+                    </tr>
+                    <tr>
+                        <td>TS00002</td>
+                        <td>DP000002</td>
+                        <td>สิทธิพงศ์ คงช่วย</td>
+                        <td>30/11/2020</td>
+                        <td>ขายสินค้าออนไลน์</td>
+                        <td>รออนุมัติ</td>
+                        <td>เจ้าหน้าที่</td>
+                        <td><a href="#">Edit</a></td>
+                    </tr>
+                </tbody>
+            </table>
+    
+        
+    </div>
+
+
+
+
+
+
+
+</body>
+</html>

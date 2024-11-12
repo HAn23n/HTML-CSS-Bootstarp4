@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/b2c7e52a3c.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="/css/WS3.css">
+</head>
+<body>
+    <div class="container">
+        <div class="text-center" style="padding: 20px;">
+            <h2>สมาชิก <i class="fas fa-home"></i></h2>
+            <form action="" style="padding-top: 40px;">
+                <input type="text" name="Search" id="Search" placeholder=" Search...">
+                <button class="btn btn-info" type="submit" style="width: 150px;">Search</button>
+                <button class="btn btn-success" type="submit"style="width: 150px;"><i class="fas fa-plus"></i> Add</button>
+            </form>
+        </div>
+        <table>
+            <tr style="background-color:rgb(161, 105, 64); color: white">
+                <th>No.</th>
+                <th>ชื่อ</th>
+                <th>ประเภท</th>
+                <th>สาขา</th>
+                <th>สิทธิ์การใช้งาน</th>
+                <th>สถานะ</th>
+                <th>Action</th>
+            </tr>
+            <tr id="data" >
+                <td>1</td>
+                <td>จิรภัทร ศรีบุญเรือง</td>
+                <td>พนักงาน</td>
+                <td>เมืองสมุทรสาคร</td>
+                <td>Admin</td>
+                <td>Active</td>
+                <td>
+                    <button class="btn btn-danger"style="border-radius: 10px;"><i class="fas fa-trash-alt" ></i> </button>
+                    <button class="btn btn-primary"style="border-radius: 10px;" data-toggle="modal" data-target="#myModal" ><i class="fas fa-wrench"></i></button>
+
+                </td>
+            </tr>
+            <tr id="data" >
+                <td>2</td>
+                <td>ชัชชาติ สิทธิพันธ์</td>
+                <td>บุคคลธรรม</td>
+                <td>รังสิต</td>
+                <td>ลูกค้า</td>
+                <td>Acitive</td>
+                <td>
+                    <button class="btn btn-danger"style="border-radius: 10px;"><i class="fas fa-trash-alt" ></i> </button>
+                    <button class="btn btn-primary"style="border-radius: 10px;" data-toggle="modal" data-target="#myModal" ><i class="fas fa-wrench"></i></button>
+                </td>
+            </tr>
+            
+            <tr id="data" >
+                <td>3</td>
+                <td>บริษัท Soft Square</td>
+                <td>นิติบุคคล</td>
+                <td>เมืองปทุมธานี</td>
+                <td>ลูกค้า</td>
+                <td>Inactive</td>
+                <td>
+                    <button class="btn btn-danger"style="border-radius: 10px;"><i class="fas fa-trash-alt" ></i> </button>
+                    <button class="btn btn-primary"style="border-radius: 10px;" data-toggle="modal" data-target="#myModal" ><i class="fas fa-wrench"></i></button>
+
+                </td>
+            </tr>
+            
+            <tr id="data" >
+                <td>4</td>
+                <td>ดอมมินิก โทเรตโต้</td>
+                <td>พนักงาน</td>
+                <td>เมืองปทุมธานี</td>
+                <td>บุรุษไปรษณีย์</td>
+                <td>Active</td>
+                <td>
+                    <button class="btn btn-danger"style="border-radius: 10px;"><i class="fas fa-trash-alt" ></i> </button>
+                    <button class="btn btn-primary"style="border-radius: 10px;" data-toggle="modal" data-target="#myModal" ><i class="fas fa-wrench"></i></button>
+
+            </tr>
+        </table>
+    </div>
+
+
+
+
+
+   <!-- The Modal -->
+   <div class="modal fade" id="myModal">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+        
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h4 class="modal-title">เพิ่มผู้ใช้งาน</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            
+            <!-- Modal Body -->
+            <div class="modal-body">
+   
+                    <div class="form-group form-row">
+                        <label class="col-sm-3 col-form-label">ประเภท<span>*</span> :</label>
+                        <div class="col-sm-6">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="type" id="external" value="External"required>
+                                <label class="form-check-label" for="external">External</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="type" id="internal" value="Internal">
+                                <label class="form-check-label" for="internal">Internal</label>
+                            </div>
+                        </div>
+                    </div>
+
+          
+                    <div class="form-group form-row">
+                        <label class="col-sm-3 col-form-label">ประเภทลูกค้า<span>*</span> :</label>
+                        <div class="col-sm-6">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="customerType" id="corporate" value="นิติบุคคล"required>
+                                <label class="form-check-label" for="corporate">นิติบุคคล</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="customerType" id="individual" value="บุคคลธรรมดา">
+                                <label class="form-check-label" for="individual">บุคคลธรรมดา</label>
+                            </div>
+                        </div>
+                    </div>
+
+          
+                    <div class="form-group form-row">
+                        <label for="Fname" class="col-sm-3 col-form-label">ชื่อ<span>*</span> :</label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" id="Fname" placeholder="ชื่อ"required>
+                        </div>
+                    </div>
+                    
+                
+                    <div class="form-group form-row">
+                        <label for="Lname" class="col-sm-3 col-form-label">สกุล<span>*</span> :</label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" id="Lname" placeholder="สกุล" required>
+                        </div>
+                    </div>
+                    
+
+                    <div class="form-group form-row">
+                        <label class="col-sm-3 col-form-label">เพศ<span>*</span> :</label>
+                        <div class="col-sm-6">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="gender" id="male" value="ชาย" required>
+                                <label class="form-check-label" for="male">ชาย</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="gender" id="female" value="หญิง"required>
+                                <label class="form-check-label" for="female">หญิง</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="gender" id="specified" value="ไม่ระบุ"required>
+                                <label class="form-check-label" for="specified">ไม่ระบุ</label>
+                            </div>
+                        </div>
+                    </div>
+                    
+        
+                    <div class="form-group form-row">
+                        <label for="username" class="col-sm-3 col-form-label">รหัสผู้ใช้<span>*</span> :</label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" id="username" placeholder="Username" required> 
+                        </div>
+                    </div>
+                    
+      
+                    <div class="form-group form-row">
+                        <label for="password" class="col-sm-3 col-form-label">รหัสผ่าน<span>*</span> :</label>
+                        <div class="col-sm-6">
+                            <input type="password" class="form-control" id="password" placeholder="Password" required>
+                        </div>
+                    </div>
+
+
+                    <div class="form-group form-row">
+                        <label for="Id_card" class="col-sm-3 col-form-label" >เลขที่บัตรประชาชน/เลขที่เสียภาษี<span>*</span> :</label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" id="Id_card" placeholder="เลขที่บัตรประชาชน/เลขที่เสียภาษี" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group form-row">
+                        <label for="B_date" class="col-sm-3 col-form-label" >วันเกิด<span>*</span> :</label>
+                        <div class="col-sm-6">
+                            <input type="date" class="form-control" id="B_date" placeholder="วว/ดด/ปปปป" disabled >
+                        </div>
+                    </div>
+
+                    <div class="form-group form-row">
+                        <label for="Company" class="col-sm-3 col-form-label" >ชื่อบริษัท<span>*</span> :</label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" id="Company" placeholder="ชื่อบริษัท" required>
+                        </div>
+                    </div>
+
+                    
+                    <div class="form-group form-row">
+                        <label for="Branch" class="col-sm-3 col-form-label" >สาขา<span>*</span> :</label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" id="Branch" placeholder="สาขา" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group form-row">
+                        <label for="Id_emp" class="col-sm-3 col-form-label" >รหัสพนักงาน<span>*</span> :</label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" id="Id_emp" placeholder="รหัสพนักงาน" disabled required>
+                        </div>
+                    </div>
+
+                    <div class="form-group form-row">
+                        <label for="Start_date" class="col-sm-3 col-form-label" >เริ่มต้น:</label>
+                        <div class="col-sm-6">
+                            <input type="date" class="form-control" id="Start_date" placeholder="วว/ดด/ปปปป" disabled >
+                        </div>
+                    </div>
+
+                    <div class="form-group form-row">
+                        <label for="End_date" class="col-sm-3 col-form-label" >สิ้นสุด:</label>
+                        <div class="col-sm-6">
+                            <input type="date" class="form-control" id="End_date" placeholder="วว/ดด/ปปปป" disabled>
+                        </div>
+                    </div>
+
+                    <div class="form-group form-row">
+                        <label for="Position" class="col-sm-3 col-form-label">ตำแหน่ง<span>*</span> :</label>
+                        <div class="col-sm-6">
+                            <select class="form-control" id="Position">
+                                <option value="">กรุณาเลือกรายการ</option>
+                                <option value="position1" required>ประธานบริษัท</option>
+                                <option value="position2">ลูกจ้าง</option>
+                                <option value="position3">แผนก บัญชี </option>
+                                <option value="position4">บุคคล</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group form-row">
+                        <label for="department" class="col-sm-3 col-form-label">แผนก<span>*</span> :</label>
+                        <div class="col-sm-6">
+                            <select class="form-control" id="Department">
+                                <option value="">กรุณาเลือกรายการ</option>
+                                <option value="position1" required>ประธานบริษัท</option>
+                                <option value="position2">ลูกจ้าง</option>
+                                <option value="position3">แผนก บัญชี </option>
+                                <option value="position4">บุคคล</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group form-row">
+                        <label for="Agency" class="col-sm-3 col-form-label">หน่วยงาน<spa>*</span> :</label>
+                        <div class="col-sm-6">
+                            <select class="form-control" id="Agency">
+                                <option value="">กรุณาเลือกรายการ</option>
+                                <option value="position1" required>ประธานบริษัท</option>
+                                <option value="position2">ลูกจ้าง</option>
+                                <option value="position3">แผนก บัญชี </option>
+                                <option value="position4">บุคคล</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group form-row">
+                        <label for="email" class="col-sm-3 col-form-label" >อีเมล<span>*</span> :</label>
+                        <div class="col-sm-6">
+                            <input type="email" class="form-control" id="email" placeholder="อีเมล"required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group row">
+                        <label for="number_address" class="col-sm-3 col-form-label" >เลขที่<span>*</span> :</label>
+                        <div class="col-sm-3">
+                            <input type="text" class="form-control" id="number_address" placeholder="เลขที่" required>
+                        </div>
+                        <label for="build" class="col-sm-3 col-form-label" >อาคาร<span>*</span> :</label>
+                        <div class="col-sm-3">
+                            <input type="text" class="form-control" id="build" placeholder="อาคาร" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="swine" class="col-sm-3 col-form-label" >หมู่ที่<span>*</span> :</label>
+                        <div class="col-sm-3">
+                            <input type="text" class="form-control" id="swine" placeholder="หมู่ที่" required>
+                        </div>
+                        <label for="street" class="col-sm-3 col-form-label" >ถนน<span>*</span> :</label>
+                        <div class="col-sm-3">
+                            <input type="text" class="form-control" id="street" placeholder="ถนน" required>
+                        </div>
+                    </div>
+
+                <div class="form-group form-row">
+                        <label for="Position" class="col-sm-3 col-form-label">ตำบล/อำเภอ/จังหวัด/รหัสไปรษณีย์<span class="text-danger">*</span> :</label>
+                        <div class="col-sm-6">
+                            <select class="form-control" id="Position">
+                                <option value="">กรุณาเลือกรายการ</option>
+                                <option value="position1" required>ตำแหน่ง 1</option>
+                                <option value="position2">ตำแหน่ง 2</option>
+                                <option value="position3">ตำแหน่ง 3</option>
+                            </select>
+                        </div>
+                </div>
+
+                <div class="form-group form-row">
+                    <label for="tel" class="col-sm-3 col-form-label" >เบอร์โทรศัพท์<span>*</span> :</label>
+                    <div class="col-sm-6">
+                        <input type="tel" class="form-control" name="password" id="password" pattern="[0-9]"  maxlength="10" placeholder="เบอร์โทรศัพท์"  required>
+                    </div>
+                </div>
+
+                <div class="form-group form-row">
+                    <label for="Credit_Limit" class="col-sm-3 col-form-label" >วงเงิน<span>*</span> :</label>
+                    <div class="col-sm-6">
+                        <input type="number" class="form-control" id="Credit_Limit" placeholder="วงเงิน" value="200000" disabled required>
+                    </div>
+                </div>
+
+                <div class="form-group form-row">
+                    <label for="R_Credit_Limit" class="col-sm-3 col-form-label" >วงเงินวงเงินคงเหลือ<span>*</span> :</label>
+                    <div class="col-sm-6">
+                        <input type="number" class="form-control" id="R_Credit_Limit" placeholder="วงเงินคงเหลือ" required>
+                    </div>
+                </div>
+
+                <div class="form-group form-row">
+                    <label for="Over_Limit" class="col-sm-3 col-form-label" >วงเงินเกิน<span>*</span> :</label>
+                    <div class="col-sm-6">
+                        <input type="number" class="form-control" id="Over_Limit" placeholder="วงเงินเกิน" required>
+                    </div>
+                </div>
+
+                <div class="form-group form-row">
+                    <label class="col-sm-3 col-form-label">ประเภท<span>*</span> :</label>
+                    <div class="col-sm-6">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" name="type" id="customer" value="customer" required>
+                            <label class="form-check-label" for="customer">ลูกค้า</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" name="type" id="postman" value="postman">
+                            <label class="form-check-label" for="postman">บุรุษไปรษณีย์</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" name="type" id="System_Administrator" value="System_Administrator">
+                            <label class="form-check-label" for="System_Administrator">ผู้ดูแลรักษาระบบ</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" name="type" id="System_Dashboard" value="System_Dashboard">
+                            <label class="form-check-label" for="System_Dashboard">ผู้ดูแล Dashboard</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" name="type" id="Admin" value="Admin">
+                            <label class="form-check-label" for="Admin">Admin</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group form-row">
+                    <label class="col-sm-3 col-form-label">สิทธิ์การพิมพ์แสตมป์<span>*</span> :</label>
+                    <div class="col-sm-6">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="type" id="N_Pass" value="N_Pass" required>
+                            <label class="form-check-label" for="N_Pass">ไม่มีสิทธิ</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="type" id="Pass" value="Pass">
+                            <label class="form-check-label" for="Pass">มีสิทธิ</label>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="form-group form-row">
+                    <label for="add_detail" class="col-sm-3 col-form-label" >เพิ่มตู้<span>*</span> :</label>
+                    <div class="col-sm-6">
+                        <input type="text" class="form-control" id="add_detail" placeholder="วงเงินเกิน" required>
+                    </div>
+                    <button class="btn btn-success"style="border-radius: 10px;"><i class="fas fa-plus"></i></button>
+                </div>
+
+                <div class="form-group form-row">
+                    <label for="Status" class="col-sm-3 col-form-label">สถานะ:</label>
+                    <div class="col-sm-6">
+                        <select class="form-control" id="Status">
+                            <option value="" required>Active</option>
+                            <option value="position1">Inactive</option>
+                        </select>
+                    </div>
+                </div>
+           
+            </div>
+            <!--  Modal Footer -->
+            <div class="modal-footer d-flex justify-content-center">
+                <button type="button" class="btn btn-primary" style="width: 100px;">บันทึก</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal" style="width: 100px;">ยกเลิก</button>
+            </div>
+           
+        </div>
+    </div>
+</div>
+
+
+</body>
+    </html>

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/b2c7e52a3c.js"crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="/css/WS5.css">
+  </head>
+  
+  <body>
+    <div class="container-fluid flex-column p-3">
+        <div class="container" id="box">
+            <form class="">
+                <div class="form-group row">
+                    <label for="Type_Cus" class="col-2">ประเภทลูกค้า:</label>
+                    <div class="col-4">
+                        <select class="form-control" name="status" id="">
+                            <option selected>กรุณาเลือกรายการ</option>
+                            <option value="">ทั้งหมด</option>
+                            <option value="">บุคคลธรรมดา</option>
+                            <option value="">นิติบุคคล</option>
+                        </select>
+                    </div>
+                 
+                    <label for="Cus_ID" class="col-2 col-form-label">เลขที่สมาชิก:</label>
+                    <div class="col-2 ">
+                        <input class="form-control" type="text" placeholder="ตั้งแต่">
+                    </div>
+                    <div class="col-2">
+                        <input class="form-control" type="text" placeholder="ถึง">
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label for="A_Date" class="col-2 col-form-label">วันที่ขออนุมัติ:</label>
+                    <div class="col-2">
+                        <input type="text" class="form-control"  placeholder="ตั้งแต่">
+                    </div>
+                    <div class="col-2">
+                        <input type="text" class="form-control"  placeholder="ถึง">
+                    </div>
+                    <label for="status" class="col-2">สถานะ:</label>
+                    <div class="col-4">
+                        <select class="form-control" name="status" id="">
+                            <option selected>กรุณาเลือกรายการ</option>
+                            <option value="">อนุมัติ</option>
+                            <option value="">รออนุมัติ</option>
+                            <option value="">ไม่อนุมัติ</option>
+                        </select>
+                    </div>
+                </div>
+
+    
+                <div class="d-flex justify-content-center align-items-center">
+                    <button type="submit" class="btn btn-primary" style="width: 150px;">Report</button>
+                </div>
+                <br>
+
+            </form>
+        </div>
+
+    <br>
+        <style>
+           h2,#Type_Cus {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        </style>
+        <div>
+            <h2>รายงานขอวงเงินเครคิต</h2>
+            <p>รหัสโปรแกรม : RKLOGIS001</p>
+
+            <div class="form-group row" id="Type_Cus">
+                <label for="Type_Cus" class="col-2">ประเภทลูกค้า:</label>
+                <div class="col-4">
+                    <select class="form-control" name="status" id="">
+                        <option selected>ทั้งหมด</option>
+                        <option value="">บุคคลธรรมดา</option>
+                        <option value="">นิติบุคคล</option>
+                    </select>
+                </div>
+                
+        </div>
+        <div class="form-group row" id="Type_Cus">
+            <label for="Type_Cus" class="col-2">วันที่ขออนุมัติ:</label>
+            <div class="col-4">
+                <select class="form-control" name="status" id="">
+                    <option selected>ทั้งหมด</option>
+                    <option value="">บุคคลธรรมดา</option>
+                    <option value="">นิติบุคคล</option>
+                </select>
+            </div>
+            
+    </div>
+    <br>
+    
+            <table>
+                <thead>
+                    <tr>
+                        <th rowspan="2">ประเภทลูกค้า</th>
+                        <th rowspan="2">เลขที่รายการ</th>
+                        <th rowspan="2">เลขที่รายการ</th>
+                        <th rowspan="2">เลขที่รายการ</th>
+                        <th rowspan="2">เลขที่สมาชิก</th>
+                        <th rowspan="2">ชื่อ-สกุล</th>
+                        <th rowspan="2">วันที่ขออนุมัติ</th>
+                        <th rowspan="2">ประเภทการส่งพัสดุ</th>
+                        <th rowspan="2">ความถี่ในการใช้บริการ</th>
+                        <th rowspan="2">ประมาณการค่าส่งต่อเดือน</th>
+                        <th rowspan="2">ประเภทการขอ</th>
+                        <th rowspan="2">เหตุผลที่ขอเพิ่ม</th>
+                        <th colspan="6">ค่าส่งจริง 6 เดือนที่ผ่านมา (บาท)</th>
+                        <th rowspan="1">สถานะ</th>
+                        <th rowspan="1">ผู้อนุมัติ</th>
+                        <th rowspan="1">วันที่มีผล</th>
+                        <th rowspan="1">เงื่อนไขการชำระเงิน</th>
+                    </tr>
+                    <tr>
+                        <th>1</th>
+                        <th>2</th>
+                        <th>3</th>
+                        <th>4</th>
+                        <th>5</th>
+                        <th>6</th>
+                        <th>รออนุมัติ</th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>ขอใหม่</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>อนุมัติ</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>ขยายวงเงิน</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>ไม่อนุมัติ</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                   
+                </tbody>
+            </table>
+        </div>
+    </div>
+        
+    </div>
+
+
+
+
+
+
+
+</body>
+</html>

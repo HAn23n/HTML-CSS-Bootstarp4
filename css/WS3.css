@@ -1,0 +1,27 @@
+body{
+    background-color:rgb(153, 253, 250);
+}
+
+table{
+    width: 100%;
+    
+}
+th,td{
+   padding: 5px;
+}
+table,th,td{
+    padding: 10px;
+    border: 1px solid black;
+    border-collapse: collapse;  
+    text-align: center;
+}
+
+span{
+    color: red;
+}
+#data{
+    background-color:rgb(255, 205, 130);
+}
+i{
+   color: white;
+}
